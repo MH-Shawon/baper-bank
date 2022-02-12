@@ -27,11 +27,12 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const withdrawInput = document.getElementById('withdrw-input');
     const withdrawAmountText = withdrawInput.value;
     const newWithdrawAmount = parseFloat(withdrawAmountText);
+    console.log(newWithdrawAmount);
 
 
     // set withdraw totall 
     const withdrawTotal = document.getElementById('withdraw-total');
-    const previousWithdrawText = withdrawtTotal.innerText
+    const previousWithdrawText = withdrawTotal.innerText
     const previousWithdrawTotal = parseFloat(previousWithdrawText);
     const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount
     withdrawTotal.innerText = newWithdrawTotal
