@@ -14,8 +14,8 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const balanceTotal = document.getElementById('balance-total');
     balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
-    const nebalanceTotal = previousBalanceTotal + newDepositAmount;
-    balanceTotal.innerText = nebalanceTotal;
+    const newBalanceTotal = previousBalanceTotal + newDepositAmount;
+    balanceTotal.innerText = newBalanceTotal;
 
     // clear the deposit input 
     depositInput.value='';
@@ -24,7 +24,7 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
   // handle withdraw event handler 
 
   document.getElementById('withdraw-btn').addEventListener('click', function(){
-    const withdrawInput = document.getElementById('withdrw-input');
+    const withdrawInput = document.getElementById('withdraw-input');
     const withdrawAmountText = withdrawInput.value;
     const newWithdrawAmount = parseFloat(withdrawAmountText);
     console.log(newWithdrawAmount);
@@ -34,15 +34,15 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const withdrawTotal = document.getElementById('withdraw-total');
     const previousWithdrawText = withdrawTotal.innerText
     const previousWithdrawTotal = parseFloat(previousWithdrawText);
-    const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount
+    const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
     withdrawTotal.innerText = newWithdrawTotal
     const balanceTotal = document.getElementById('balance-total');
-  const previousBalanceText = balanceTotal.innerText;
-  const previousBalanceTotal = parseFloat(previousBalanceText);
+  const previousBalanceTotalText = balanceTotal.innerText;
+  const previousBalanceTotal = parseFloat(previousBalanceTotalText);
   const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
   balanceTotal.innerText = newBalanceTotal;
 
         // clear withdraw input 
         withdrawInput.value = '';
   });
-  
+ 
